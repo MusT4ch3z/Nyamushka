@@ -1,0 +1,180 @@
+$card_height: 480px;
+$card_width: 320px;
+$card__text_left-margin: 51px;
+$light-text-color: #ffffff;
+$card_default-color: #1698d9;
+$card_selected-color: #d91667;
+$description_disabled-color: #ffff66;
+$description__buy_text-color: #22a7e9;
+$card_disabled-color: #b3b3b3;
+
+.card {
+  height: $card_height;
+  width: $card_width;
+  background-color: #f2f2f2;
+  position: relative;
+  border: 4px solid $card_default-color;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  clip-path: path(
+    "M0 42.6762V468C0 474.627 5.37259 480 12 480H308C314.627 480 320 474.627 320 468V12C320 5.37258 314.627 0 308 0H42.6762L0 42.6762Z"
+  );
+  font-family: "Trebuchet MS";
+}
+
+.card_disabled {
+  color: $card_disabled-color;
+  border-color: $card_disabled-color;
+  cursor: default;
+}
+
+.card__first-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.card__text,
+.card__title,
+.card__subtitle {
+  margin-left: $card__text_left-margin;
+  position: relative;
+  z-index: 3;
+}
+
+.card__text {
+  margin-top: 21px;
+  position: relative;
+  z-index: 3;
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.text__quantity {
+  margin-top: 15px;
+  position: relative;
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  z-index: 3;
+}
+
+.card__title {
+  margin-top: 5px;
+  position: relative;
+  z-index: 3;
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.card__subtitle {
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card__circle {
+  height: 80px;
+  width: 80px;
+  background-color: $card_default-color;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  text-align: center;
+  color: $light-text-color;
+  z-index: 3;
+}
+
+.circle__weight {
+  font-size: 42px;
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  top: 7px;
+  z-index: 3;
+}
+
+.circle__kg {
+  font-size: 21px;
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.card__image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.image_disabled {
+  filter: opacity(50%);
+}
+
+.card__description {
+  padding-top: 14px;
+  color: $light-text-color;
+  text-align: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  justify-content: center;
+}
+
+.description__buy {
+  color: $description__buy_text-color;
+  text-decoration: underline dotted $description__buy_text-color;
+  cursor: pointer;
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.description_disabled {
+  color: $description_disabled-color;
+}
+
+.circle_selected {
+  background-color: $card_selected-color;
+}
+
+.circle_disabled {
+  background-color: $card_disabled-color;
+}
+
+.card_selected {
+  border-color: $card_selected-color;
+}
+
+.card__text_warning {
+  color: $card_selected-color;
+}
+
+.card__border {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}

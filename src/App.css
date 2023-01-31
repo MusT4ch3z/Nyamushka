@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Exo2.0-Thin';
+  src: url("./css__fonts/Exo2.0-Thin.otf") format("woff"),
+    url("./css__fonts/Exo2.0-Thin.otf") format("truetype");
+}
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%),url(images/Background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   min-height: 100vh;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__header {
+  text-align: center;
+  font-family: "Exo2.0-Thin";
+  /* margin-top: 36px; */
+  font-size: 36px;
+  line-height: 44px;
+  color: #ffffff;
+  padding: 0 0 24px 0;
 }
