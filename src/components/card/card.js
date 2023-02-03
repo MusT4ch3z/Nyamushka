@@ -16,16 +16,12 @@ const Card = ({ card, taste, quantity, weight }) => {
 
   const mouseEnterHandler = () => {
     if (cardState === "selected") {
-      // let cardText = document.querySelector(".card__text")
-      // cardText.classList.add("card__text_warning")
       setCardSubtilte("Котэ не одобряет?");
       setIsCardHover(true);
     }
   };
 
   const mouseLeaveHandler = () => {
-    // let cardText = document.querySelector(".card__text")
-    // cardText.classList.remove("card__text_warning")
     setCardSubtilte("Сказочное заморское явство");
     setIsCardHover(false);
   };
